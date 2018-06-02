@@ -13,7 +13,7 @@ class Author(models.Model):
 class BlogPost(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     post_title = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField('Published date', help_text='Date on which the post was published')
 
     # This defines how the object will be represented.
     def __str__(self):
